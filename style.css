@@ -1,0 +1,33 @@
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    height:100vh;   
+}
+
+.square{
+    width:calc(100%/16);
+    height:calc(100%/16);
+    background-color: #222;
+    box-sizing: border-box;
+    border:2px solid white;
+}
+
+.mouseOver{
+    background-color:white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn{
+    align-self: center;
+    margin-bottom: 30px;
+    padding:8px 24px;
+    border-radius: 16px;
+    background-color: #efefef;
+    border:none;
+    cursor: pointer;
+}
