@@ -27,6 +27,7 @@ function removeGrid() {
         div.remove();
     });
 }
+let darkenSquare = [];
 
 // a new grid generated
 function makeGrid(nmb) {
@@ -53,8 +54,17 @@ function addMouseOver() {
     const squares = document.querySelectorAll('.square');
     squares.forEach((square) => {
         square.addEventListener('mouseover', (event) => {
-            event.target.classList.add('mouseOver');
+            // event.target.classList.add('mouseOver');
+            // event.target.style.backgroundColor = getRandomRgb();
+            event.target.style.backgroundColor = `rgb(0,0,0)`;
         });
     });
 }
 addMouseOver();
+
+//function to randomize the square’s RGB value entirely
+function getRandomRgb() {
+    return `rgb(${Math.floor(Math.random() * 256)},
+                ${Math.floor(Math.random() * 256)},
+                ${Math.floor(Math.random() * 256)})`;
+} 
